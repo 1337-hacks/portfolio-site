@@ -40,12 +40,10 @@
 
 .landing-greeting {
   position: sticky;
-  position: absolute;
   top: 50%;
-  left: 15%;
+  margin-left: 15%;
 }
 
 .page-links {
-  margin-left: 50%;
-  margin-bottom: 10%;
+  margin-bottom: 15%;
 }

@@ -11,6 +11,14 @@ h1, h2, h3, h4, h5 {
   color: #B2CF74;
 }
 
+h1 {
+  font-size: 8rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
 p {
   color: #B2CF74;
 }
@@ -18,4 +26,13 @@ p {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+span {
+  padding-bottom: 1px;
+  border-bottom: 10px solid #B2CF74;
 }
