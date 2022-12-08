@@ -3,12 +3,13 @@ body {
   font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #282c34;
+  color: #B2CF74;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Raleway', sans-serif;
   margin: 0;
-  color: #B2CF74;
 }
 
 h1 {
@@ -19,10 +20,6 @@ h2 {
   font-size: 4rem;
 }
 
-p {
-  color: #B2CF74;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -30,9 +27,11 @@ code {
 
 a {
   text-decoration: none;
+  color: #B2CF74;
+  border-bottom: 10px solid #B2CF74;
 }
 
-span {
-  padding-bottom: 1px;
-  border-bottom: 10px solid #B2CF74;
+a:hover {
+  color: #91a85f;
+  border-bottom: 10px solid #91a85f;
 }

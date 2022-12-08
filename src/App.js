@@ -22,11 +22,11 @@ function App() {
             </div>
           </Col>
           <Col style={{position: "relative", paddingTop: "100vh"}}>
-            <div className='page-links'><a href="#about"><h1><span>About</span></h1></a></div>
-            <div className='page-links'><a href="#projects"><h1><span>Projects</span></h1></a></div>
-            <div className='page-links'><a href="#linkedin"><h1><span>LinkedIn</span></h1></a></div>
-            <div className='page-links'><a href="#github"><h1><span>GitHub</span></h1></a></div>
-            <div className='page-links'><a href="#contact"><h1><span>Contact</span></h1></a></div>            
+            <div className='page-links'><h1><a href="#about">About</a></h1></div>
+            <div className='page-links'><h1><a href="#projects">Projects</a></h1></div>
+            <div className='page-links'><h1><a href="#linkedin">LinkedIn</a></h1></div>
+            <div className='page-links'><h1><a href="#github">GitHub</a></h1></div>
+            <div className='page-links'><h1><a href="#contact">Contact</a></h1></div>
           </Col>
         </Row>
       </Container>
