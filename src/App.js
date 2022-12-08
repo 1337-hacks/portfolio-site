@@ -11,11 +11,12 @@ function App() {
   return (
     <>
       <Container fluid style={{height: "200vh"}}>
-        <Row className='time-date'>
-          <Col className='time'><p>5:12pm</p></Col>
-          <Col className='date'><p>24th December 2022</p></Col>
-        </Row>
         <Row>
+          <Col className='time-date-col' sm={1}>
+            <div className='time-date'>
+              <p>5:12pm</p>
+            </div>
+          </Col>
           <Col className='landing-col'>
             <div className='landing-greeting'>
               <h2>Good xxx,<br/>I'm Elijah.</h2>
@@ -27,6 +28,11 @@ function App() {
             <div className='links'><h1><a href="#linkedin">LinkedIn</a></h1></div>
             <div className='links'><h1><a href="#github">GitHub</a></h1></div>
             <div className='links'><h1><a href="#contact">Contact</a></h1></div>
+          </Col>
+          <Col className='time-date-col' sm={2}>
+            <div className='time-date'>
+              <p>24th December 2022</p>
+            </div>
           </Col>
         </Row>
         <Row>

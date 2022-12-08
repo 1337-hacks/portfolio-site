@@ -1,10 +1,12 @@
+/*------------------- ELEMENTS CSS -------------------*/
+
 body {
   margin: 0;
   font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #282c34;
-  color: #B2CF74;
+  background-color: #B2CF74;
+  color: #000000;
 }
 
 h1, h2, h3, h4, h5 {
@@ -27,11 +29,11 @@ code {
 
 a {
   text-decoration: none;
-  color: #B2CF74;
-  border-bottom: 10px solid #B2CF74;
+  color: #000000;
+  border-bottom: 10px solid #000000;
 }
 
 a:hover {
-  color: #91a85f;
-  border-bottom: 10px solid #91a85f;
+  color: #12201a;
+  border-bottom: 10px solid #12201a;
 }

@@ -1,15 +1,4 @@
-.App {
-  text-align: center;
-  background-color: #282c34;
-  color: #B2CF74;
-}
-
-.App-header {
-  background-color: #282c34;
-  color: #B2CF74;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/*------------------- DIV AND CONTAINER CSS -------------------*/
 
 .container {
   width: 100%;
@@ -17,35 +6,27 @@
   margin: 0;
 }
 
+.time-date-col {
+  height: 200vh;
+  padding-bottom: 5%;
+}
+
 .time-date {
+  position: sticky;
+  top: 2%;
+  text-align: center;
   font-family: 'Inter', sans-serif;
-}
-
-.time {
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  margin: 2%;
-  width: auto;
-}
-
-.date {
-  position: absolute;
-  top: 0%;
-  right: 0%;
-  margin: 2%;
-  text-align: right;
-  width: auto;
 }
 
 .landing-greeting {
   position: sticky;
-  top: 50%;
+  top: 45%;
   margin-left: 15%;
+  padding-bottom: 10%;
 }
 
 .links {
-  margin-bottom: 15%;
+  margin-top: 15%;
 }
 
 .landing-col {
@@ -57,6 +38,7 @@
 }
 
 .footer-col {
+  font-family: 'Inter', sans-serif;
   padding-top: 100vh;
   text-align: center;
 }
