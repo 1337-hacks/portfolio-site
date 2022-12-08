@@ -44,6 +44,25 @@
   margin-left: 15%;
 }
 
-.page-links {
+.links {
   margin-bottom: 15%;
+}
+
+.landing-col {
+  height: 200vh;
+}
+
+.links-col {
+  padding-top: 100vh;
+}
+
+.footer-col {
+  padding-top: 100vh;
+  text-align: center;
+}
+
+@media (max-width: 731px) {
+  .landing-col {height: 100vh;}
+  .links-col {padding-top: 10vh; height: 100vh;}
+  h1 {font-size: 4rem;}
 }
