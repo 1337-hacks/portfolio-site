@@ -12,24 +12,24 @@ function App() {
     <>
       <Container fluid style={{height: "200vh"}}>
         <Row>
-          <Col className='time-date-col' sm={1}>
+          <Col className='time-date-col' md={1}>
             <div className='time-date'>
               <p>5:12pm</p>
             </div>
           </Col>
-          <Col className='landing-col'>
+          <Col className='landing-col' xs={12} md={true}>
             <div className='landing-greeting'>
               <h2>Good xxx,<br/>I'm Elijah.</h2>
             </div>
           </Col>
-          <Col className='links-col'>
+          <Col className='links-col' xs={12} md={true}>
             <div className='links'><h1><a href="#about">About</a></h1></div>
             <div className='links'><h1><a href="#projects">Projects</a></h1></div>
             <div className='links'><h1><a href="#linkedin">LinkedIn</a></h1></div>
             <div className='links'><h1><a href="#github">GitHub</a></h1></div>
             <div className='links'><h1><a href="#contact">Contact</a></h1></div>
           </Col>
-          <Col className='time-date-col' sm={2}>
+          <Col className='time-date-col' md={2}>
             <div className='time-date'>
               <p>24th December 2022</p>
             </div>

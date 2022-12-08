@@ -31,20 +31,29 @@
 
 .landing-col {
   height: 200vh;
+  /* background-color: aqua; */
 }
 
 .links-col {
   padding-top: 100vh;
+  /* background-color: red; */
 }
 
 .footer-col {
   font-family: 'Inter', sans-serif;
   padding-top: 100vh;
   text-align: center;
+  /* background-color: bisque; */
 }
 
-@media (max-width: 731px) {
+@media (max-width: 1300px) {
+  h1 {font-size: 4rem;}
+}
+
+@media (max-width: 800px) {
   .landing-col {height: 100vh;}
   .links-col {padding-top: 10vh; height: 100vh;}
+  a {margin-top: 50px;}
   h1 {font-size: 4rem;}
+  .time-date-col {display: none;}
 }
