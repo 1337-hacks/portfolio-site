@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './content/App';
+import Canvas from './three-scene/Canvas';
 import reportWebVitals from './reportWebVitals';
+
+const canvas = ReactDOM.createRoot(document.getElementById('canvas'));
+canvas.render(
+  <React.StrictMode>
+    <Canvas />
+  </React.StrictMode>
+);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

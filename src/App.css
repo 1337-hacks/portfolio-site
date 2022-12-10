@@ -1,9 +1,24 @@
 /*------------------- DIV AND CONTAINER CSS -------------------*/
 
+#canvas {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+}
+
+.scene {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+}
+
 .container {
-  width: 100%;
-  padding: 0;
-  margin: 0;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
 }
 
 .time-date-col {
@@ -47,12 +62,14 @@
 }
 
 @media (max-width: 1300px) {
+  h2 {font-size: 3rem;}
   h1 {font-size: 4rem;}
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .landing-col {height: 100vh;}
   .links-col {padding-top: 10vh; height: 100vh;}
+  .landing-greeting {margin-left: 0%;}
   a {margin-top: 50px;}
   h1 {font-size: 4rem;}
   .time-date-col {display: none;}

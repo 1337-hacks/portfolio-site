@@ -1,16 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Stack from 'react-bootstrap/Stack';
+import '../App.css'
+import Scene from '../three-scene/Scene.js'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Stack from 'react-bootstrap/Stack'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import { config } from 'react-spring'
+import {useEffect, useState, createRef} from 'react'
 
 function App() {
+
   return (
     <>
-      <Container fluid style={{height: "200vh"}}>
+      <Container className='container' fluid style={{height: "200vh"}}>
         <Row>
           <Col className='time-date-col' md={1}>
             <div className='time-date'>
