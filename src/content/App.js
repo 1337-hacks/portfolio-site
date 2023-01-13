@@ -14,27 +14,25 @@ function App() {
     <>
       <Container className='container' fluid style={{height: "200vh"}}>
         <Row>
-          <Col className='time-date-col' md={1}>
-            <div className='time-date'>
+          <Col className='landing-col' xs={12} md={true}>
+            <div className='time'>
               <p>5:12pm</p>
             </div>
-          </Col>
-          <Col className='landing-col' xs={12} md={true}>
             <div className='landing-greeting'>
               <h2>Good xxx,<br/>I'm Elijah.</h2>
             </div>
           </Col>
           <Col className='links-col' xs={12} md={true}>
-            <div className='links'><h1><a href="#about">About</a></h1></div>
-            <div className='links'><h1><a href="#projects">Projects</a></h1></div>
-            <div className='links'><h1><a href="#linkedin">LinkedIn</a></h1></div>
-            <div className='links'><h1><a href="#github">GitHub</a></h1></div>
-            <div className='links'><h1><a href="#contact">Contact</a></h1></div>
-          </Col>
-          <Col className='time-date-col' md={2}>
-            <div className='time-date'>
+            <div className='date'>
               <p>24th December 2022</p>
             </div>
+            <Stack gap={5}>
+              <div className='links'><h1><a href="#about">About</a></h1></div>
+              <div className='links'><h1><a href="#projects">Projects</a></h1></div>
+              <div className='links'><h1><a href="#linkedin">LinkedIn</a></h1></div>
+              <div className='links'><h1><a href="#github">GitHub</a></h1></div>
+              <div className='links'><h1><a href="#contact">Contact</a></h1></div>
+            </Stack> 
           </Col>
         </Row>
         <Row>

@@ -26,10 +26,17 @@
   padding-bottom: 5%;
 }
 
-.time-date {
+.time {
   position: sticky;
   top: 2%;
-  text-align: center;
+  /* text-align: center; */
+  font-family: 'Inter', sans-serif;
+}
+
+.date {
+  position: sticky;
+  top: 2%;
+  text-align: right;
   font-family: 'Inter', sans-serif;
 }
 
@@ -50,7 +57,7 @@
 }
 
 .links-col {
-  padding-top: 100vh;
+  /* padding-top: 100vh; */
   /* background-color: red; */
 }
 
@@ -72,5 +79,6 @@
   .landing-greeting {margin-left: 0%;}
   a {margin-top: 50px;}
   h1 {font-size: 4rem;}
-  .time-date-col {display: none;}
+  .time {display: none;}
+  .date {display: none;}
 }
