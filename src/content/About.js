@@ -4,7 +4,8 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Stack from 'react-bootstrap/Stack'
 
-function About() {
+function About(props) {
+
     return (
         <Container className='about-page'>
             <Row>
@@ -13,7 +14,7 @@ function About() {
                         <h2>About</h2>
                     </div>
                     <div className='back-button'>
-                        <h2>Back</h2>
+                        <a href='#home' onClick={props.back}><h2>Back</h2></a>
                     </div>
                 </Col>
                 <Col md={9} className='about-description'>

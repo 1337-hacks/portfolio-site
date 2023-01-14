@@ -69,7 +69,7 @@ function App() {
           </Row>
         </Container>
       }
-      {pageSelect === 'about' && <About/>}
+      {pageSelect === 'about' && <About back={()=>setPageSelect('none')}/>}
     </>
   );
 }
