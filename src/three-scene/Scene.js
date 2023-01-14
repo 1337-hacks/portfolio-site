@@ -25,12 +25,12 @@ function Mesh(props) {
     return (
         <group 
             ref={groupMesh} 
-            position={[0, -0.75, 4]}
+            position={[0, -0.75, 3]}
             rotation-y={Math.PI / 5} 
             rotation-x={Math.PI / 5}
         >
             <mesh ref={sphereMesh}>
-                <sphereGeometry args={[2.5, 20, 20]}/>
+                <sphereGeometry args={[2, 10, 10]}/>
                 <meshStandardMaterial wireframe wireframeLinewidth={0.5}/>
             </mesh>
         </group>
@@ -44,7 +44,7 @@ function Scene() {
         <Canvas 
             dpr={window.devicePixelRatio}
             gl={{ outputEncoding: THREE.sRGBEncoding, antialias: true, toneMapping: THREE.NoToneMapping }}
-            camera={{ fov: 75, near: 0.1, far: 1000, position: [20, 0, 0] }}
+            camera={{ fov: 75, near: 0.1, far: 1000, position: [10, 0, 0] }}
         >
             {/* <OrbitControls minDistance={5} maxDistance={5}/> */}
             <Mesh axis={new THREE.Vector3(0, 1, 0)} angle={Math.PI/5}/>
