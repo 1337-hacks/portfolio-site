@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col'
 import Stack from 'react-bootstrap/Stack'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import { config } from 'react-spring'
-import {useEffect, useState, createRef} from 'react'
+import {useEffect, useState, createRef, useRef, useCallback, useLayoutEffect} from 'react'
 import About from './About'
 
 function App() {
@@ -37,37 +37,54 @@ function App() {
     } 
   }, [pageSelect])
 
+  const scrollRef = useRef(null)
+  const linkRef = useRef(null)
+  const [linksHeight, setLinksHeight] = useState(0)
+
+  const handleScroll = useCallback(()=> {
+      if(scrollRef.current) {
+        const scroll = scrollRef.current.scrollTop
+        if(scroll >= (scrollRef.current.scrollHeight / 2)) {
+          scrollRef.current.scrollTop = 1
+        }
+        if(scroll <= 0) {
+          scrollRef.current.scrollTop = (scrollRef.current.scrollHeight / 2) - 1
+        }
+      }
+  },[])
+
+
   return (
-    <>{pageSelect === 'none' && 
-        <Container className='container' fluid style={{height: "200vh"}}>
-          <Row>
-            <Col className='landing-col' xs={12} md={true}>
+    <>
+
+      {pageSelect === 'none' && 
+        <div className='container'>
+          <div>
+            <div className='landing-col'>
               <div className='time'>
                 <p>5:12pm</p>
               </div>
               <div className='landing-greeting'>
                 <h2>Good xxx,<br/>I'm Elijah.</h2>
               </div>
-            </Col>
-            <Col className='links-col' xs={12} md={true}>
-              <div className='date'>
-                <p>24th December 2022</p>
-              </div>
-              <Stack gap={5}>
-                <div className='links'><h1><a href="#about" onClick={()=>{setPageSelect('about')}}>About</a></h1></div>
-                <div className='links'><h1><a href="#projects" onClick={()=>{setPageSelect('projects')}}>Projects</a></h1></div>
-                <div className='links'><h1><a href="#linkedin">LinkedIn</a></h1></div>
-                <div className='links'><h1><a href="#github">GitHub</a></h1></div>
-                <div className='links'><h1><a href="#contact" onClick={()=>{setPageSelect('contact')}}>Contact</a></h1></div>
-              </Stack> 
-            </Col>
-          </Row>
-          <Row>
-            <Col className='footer-col'>
-              <p>Made by Elijah Nucum. All rights reserved 2022</p>
-            </Col>
-          </Row>
-        </Container>
+            </div>
+            <div className='date'>
+              <p>24th December 2022</p>
+            </div>
+            <div className='links-col' ref={scrollRef} onScroll={handleScroll}>
+              <div className='links' ref={linkRef}><h1><a href="#about">About</a></h1></div>
+              <div className='links'><h1><a href="#projects">Projects</a></h1></div>
+              <div className='links'><h1><a href="#linkedin">LinkedIn</a></h1></div>
+              <div className='links'><h1><a href="#github">GitHub</a></h1></div>
+              <div className='links'><h1><a href="#contact">Contact</a></h1></div>
+              <div className='links'><h1><a href="#about">About</a></h1></div>
+              <div className='links'><h1><a href="#projects">Projects</a></h1></div>
+              <div className='links'><h1><a href="#linkedin">LinkedIn</a></h1></div>
+              <div className='links'><h1><a href="#github">GitHub</a></h1></div>
+              <div className='links'><h1><a href="#contact">Contact</a></h1></div>
+            </div>
+          </div>
+        </div>
       }
       {pageSelect === 'about' && <About back={()=>setPageSelect('none')}/>}
     </>
