@@ -24,14 +24,19 @@
 } */
 
 .time {
-  position: sticky;
+  position: absolute;
+  width: 15%;
   top: 2%;
+  left: 2%;
+  text-align: left;
   font-family: 'Inter', sans-serif;
 }
 
 .date {
-  position: sticky;
+  position: absolute;
+  width: 15%;
   top: 2%;
+  right: 2%;
   text-align: right;
   font-family: 'Inter', sans-serif;
 }
@@ -46,9 +51,9 @@
 }
 
 .landing-greeting {
-  position: absolute;
+  position: relative;
   top: 45%;
-  left: 20%;
+  left: 25%;
 }
 
 .links-col {

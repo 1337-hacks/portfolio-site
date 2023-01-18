@@ -39,7 +39,6 @@ function App() {
 
   const scrollRef = useRef(null)
   const linkRef = useRef(null)
-  const [linksHeight, setLinksHeight] = useState(0)
 
   const handleScroll = useCallback(()=> {
       if(scrollRef.current) {
@@ -53,27 +52,52 @@ function App() {
       }
   },[])
 
+  const [date, setDate] = useState(new Date())
+  const [greeting, setGreeting] = useState("xxx")
+
+  useEffect(()=> {
+    setInterval(()=> {
+      setDate(new Date())
+    }, 1000)
+  }, [date])
+
+  useEffect(()=> {
+    let time = date.getHours()
+
+    if(time < 12) {
+      setGreeting("morning");
+    }
+    else if(time >= 12 && time < 18) {
+      setGreeting("afternoon");
+    }
+    else {
+      setGreeting("evening");
+    }
+  }, [date]);
 
   return (
     <>
-      {/* <div className='time'>
-        <p>5:12pm</p>
-      </div> */}
-      {/* <div className='date'>
-        <p>24th December 2022</p>
-      </div> */}
+      
 
       {pageSelect === 'none' && 
         <div className='home-container'>
+
+          <div className='time'>
+            <p>{date.toLocaleString([], {hour: '2-digit', minute:'2-digit'})}</p>
+          </div>
+          <div className='date'>
+            <p>{date.toLocaleDateString()}</p>
+          </div>
+
           <div className='landing-col'>
             <div className='landing-greeting'>
-              <h2>Good xxx,<br/>I'm Elijah.</h2>
+              <h2>Good {greeting},<br/>I'm Elijah.</h2>
             </div>
           </div>
           
           <div className='links-col' ref={scrollRef} onScroll={handleScroll}>
             <div className='links' ref={linkRef}><h1><a href="#about">About</a></h1></div>
-            <div className='links'><h1><a href="#projects">Projects</a></h1></div>
+            <div className='links'><h1><a href="#projects" onClick={()=> console.log(date)}>Projects</a></h1></div>
             <div className='links'><h1><a href="#linkedin">LinkedIn</a></h1></div>
             <div className='links'><h1><a href="#github">GitHub</a></h1></div>
             <div className='links'><h1><a href="#contact">Contact</a></h1></div>
@@ -83,6 +107,7 @@ function App() {
             <div className='links'><h1><a href="#github">GitHub</a></h1></div>
             <div className='links'><h1><a href="#contact">Contact</a></h1></div>
           </div>
+
         </div>
       }
       {pageSelect === 'about' && <About back={()=>setPageSelect('none')}/>}

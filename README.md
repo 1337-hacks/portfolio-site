@@ -13,7 +13,7 @@ To-do (in chronological order):
 
 Development Notes:
 - To remove react-bootstrap library (not suitable for this kind of site)
-- To implement css flexbox layout instead of bootstrap layout
+- ~~To implement css flexbox layout instead of bootstrap layout~~ Implement css absolute-relative positioning for homepage (and maybe use flexbox for other pages...)
 - Add animations after completing a single page!
 - Have to design a 404 redirect page...
 - Development is going well and hopefully will be able to have a complete and working site very soon :)
