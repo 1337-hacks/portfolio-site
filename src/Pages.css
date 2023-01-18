@@ -1,0 +1,19 @@
+.about-page {
+    position: relative;
+    top: 0%;
+    bottom: 0%;
+    margin: 5% 5%;
+}
+
+.about-area {
+    border-right-style: solid;
+}
+
+.about-description {
+    padding-left: 5%;
+}
+
+.back-button {
+    position: absolute;
+    bottom: 0%;
+}

@@ -56,33 +56,32 @@ function App() {
 
   return (
     <>
+      {/* <div className='time'>
+        <p>5:12pm</p>
+      </div> */}
+      {/* <div className='date'>
+        <p>24th December 2022</p>
+      </div> */}
 
       {pageSelect === 'none' && 
-        <div className='container'>
-          <div>
-            <div className='landing-col'>
-              <div className='time'>
-                <p>5:12pm</p>
-              </div>
-              <div className='landing-greeting'>
-                <h2>Good xxx,<br/>I'm Elijah.</h2>
-              </div>
+        <div className='home-container'>
+          <div className='landing-col'>
+            <div className='landing-greeting'>
+              <h2>Good xxx,<br/>I'm Elijah.</h2>
             </div>
-            <div className='date'>
-              <p>24th December 2022</p>
-            </div>
-            <div className='links-col' ref={scrollRef} onScroll={handleScroll}>
-              <div className='links' ref={linkRef}><h1><a href="#about">About</a></h1></div>
-              <div className='links'><h1><a href="#projects">Projects</a></h1></div>
-              <div className='links'><h1><a href="#linkedin">LinkedIn</a></h1></div>
-              <div className='links'><h1><a href="#github">GitHub</a></h1></div>
-              <div className='links'><h1><a href="#contact">Contact</a></h1></div>
-              <div className='links'><h1><a href="#about">About</a></h1></div>
-              <div className='links'><h1><a href="#projects">Projects</a></h1></div>
-              <div className='links'><h1><a href="#linkedin">LinkedIn</a></h1></div>
-              <div className='links'><h1><a href="#github">GitHub</a></h1></div>
-              <div className='links'><h1><a href="#contact">Contact</a></h1></div>
-            </div>
+          </div>
+          
+          <div className='links-col' ref={scrollRef} onScroll={handleScroll}>
+            <div className='links' ref={linkRef}><h1><a href="#about">About</a></h1></div>
+            <div className='links'><h1><a href="#projects">Projects</a></h1></div>
+            <div className='links'><h1><a href="#linkedin">LinkedIn</a></h1></div>
+            <div className='links'><h1><a href="#github">GitHub</a></h1></div>
+            <div className='links'><h1><a href="#contact">Contact</a></h1></div>
+            <div className='links'><h1><a href="#about">About</a></h1></div>
+            <div className='links'><h1><a href="#projects">Projects</a></h1></div>
+            <div className='links'><h1><a href="#linkedin">LinkedIn</a></h1></div>
+            <div className='links'><h1><a href="#github">GitHub</a></h1></div>
+            <div className='links'><h1><a href="#contact">Contact</a></h1></div>
           </div>
         </div>
       }
