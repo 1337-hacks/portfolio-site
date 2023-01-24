@@ -1,6 +1,6 @@
 /*------------------- DIV AND CONTAINER CSS -------------------*/
 
-#canvas {
+#root {
   position: fixed;
   top: 0%;
   left: 0%;
@@ -8,77 +8,76 @@
   bottom: 0%;
 }
 
-.scene {
-  position: fixed;
-  top: 0%;
-  left: 0%;
+.wrapper {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
 }
 
-/* .home-container {
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: stretch;
-  align-content: center;
-} */
+  justify-content: space-evenly;
+  align-items: baseline;
+  padding: 16px;
+}
 
 .time {
-  position: absolute;
-  width: 15%;
-  top: 2%;
-  left: 2%;
   text-align: left;
   font-family: 'Inter', sans-serif;
+  width: 10%;
+}
+
+.logo {
+  flex-grow: 5;
+  text-align: center;
 }
 
 .date {
-  position: absolute;
-  width: 15%;
-  top: 2%;
-  right: 2%;
   text-align: right;
   font-family: 'Inter', sans-serif;
+  width: 10%;
 }
 
-
-
-.landing-col {
-  position: absolute;
-  height: 100vh;
-  width: 50%;
-  left: 0%;
+.landing-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-grow: 2;
+  padding: 10% 0%;
 }
 
-.landing-greeting {
-  position: relative;
-  top: 45%;
-  left: 25%;
+.landing-row-left {
+  display: flex;
+  align-items: flex-start;
 }
 
-.links-col {
-  position: absolute;
-  height: 100vh;
-  width: 50%;
-  right: 0%;
-  overflow-y: scroll;
+.greeting-1 {
+  text-align: left;
+}
+
+.landing-row-right {
+  display: flex;
+  align-items: flex-end;
+}
+
+.greeting-2 {
+  text-align: right;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .links {
-  margin-top: 15%;
-}
-
-@media (max-width: 1300px) {
-  h2 {font-size: 3rem;}
-  h1 {font-size: 4rem;}
-}
-
-@media (max-width: 850px) {
-  .landing-col {height: 100vh;}
-  .links-col {padding-top: 10vh; height: 100vh;}
-  .landing-greeting {margin-left: 0%;}
-  a {margin-top: 50px;}
-  h1 {font-size: 4rem;}
-  .time {display: none;}
-  .date {display: none;}
+  text-align: center;
+  padding: 0% 2%;
 }

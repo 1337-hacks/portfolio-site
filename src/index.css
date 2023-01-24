@@ -5,8 +5,8 @@ body {
   font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #B2CF74;
-  color: #000000;
+  background-color: #E4C77D;
+  color: #251818;
 }
 
 h1, h2, h3, h4, h5 {
@@ -33,11 +33,11 @@ code {
 
 a {
   text-decoration: none;
-  color: #000000;
-  border-bottom: 10px solid #000000;
+  color: #251818;
+  /* border-bottom: 10px solid #000000; */
 }
 
 a:hover {
   color: #12201a;
-  border-bottom: 10px solid #12201a;
+  /* border-bottom: 10px solid #12201a; */
 }

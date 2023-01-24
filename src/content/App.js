@@ -36,22 +36,7 @@ function App() {
         break;
     } 
   }, [pageSelect])
-
-  const scrollRef = useRef(null)
-  const linkRef = useRef(null)
-
-  const handleScroll = useCallback(()=> {
-      if(scrollRef.current) {
-        const scroll = scrollRef.current.scrollTop
-        if(scroll >= (scrollRef.current.scrollHeight / 2)) {
-          scrollRef.current.scrollTop = 1
-        }
-        if(scroll <= 0) {
-          scrollRef.current.scrollTop = (scrollRef.current.scrollHeight / 2) - 1
-        }
-      }
-  },[])
-
+  
   const [date, setDate] = useState(new Date())
   const [greeting, setGreeting] = useState("xxx")
 
@@ -77,40 +62,41 @@ function App() {
 
   return (
     <>
-      
-
-      {pageSelect === 'none' && 
-        <div className='home-container'>
-
+    <div className='wrapper'>
+      <div className='home-container'>
+        <div className='header'>
           <div className='time'>
-            <p>{date.toLocaleString([], {hour: '2-digit', minute:'2-digit'})}</p>
+            <p>{date.toLocaleString([], {hour: '2-digit', minute:'2-digit', second:'2-digit'})}</p>
           </div>
+          <div className='logo'><p>elijah.n</p></div>
           <div className='date'>
             <p>{date.toLocaleDateString()}</p>
           </div>
+        </div>
 
-          <div className='landing-col'>
-            <div className='landing-greeting'>
-              <h2>Good {greeting},<br/>I'm Elijah.</h2>
+        <div className='landing-row'>
+          <div className='landing-row-left'>
+            <div className='greeting-1'>
+              <h2>Good {greeting}!<br/>I'm Elijah,</h2>
+            </div>
+          </div>
+          <div className='landing-row-right'>
+            <div className='greeting-2'>
+              <h2>an Aspiring<br/>Web Developer.</h2>
             </div>
           </div>
           
-          <div className='links-col' ref={scrollRef} onScroll={handleScroll}>
-            <div className='links' ref={linkRef}><h1><a href="#about">About</a></h1></div>
-            <div className='links'><h1><a href="#projects" onClick={()=> console.log(date)}>Projects</a></h1></div>
-            <div className='links'><h1><a href="#linkedin">LinkedIn</a></h1></div>
-            <div className='links'><h1><a href="#github">GitHub</a></h1></div>
-            <div className='links'><h1><a href="#contact">Contact</a></h1></div>
-            <div className='links'><h1><a href="#about">About</a></h1></div>
-            <div className='links'><h1><a href="#projects">Projects</a></h1></div>
-            <div className='links'><h1><a href="#linkedin">LinkedIn</a></h1></div>
-            <div className='links'><h1><a href="#github">GitHub</a></h1></div>
-            <div className='links'><h1><a href="#contact">Contact</a></h1></div>
-          </div>
-
         </div>
-      }
-      {pageSelect === 'about' && <About back={()=>setPageSelect('none')}/>}
+
+        <div className='footer'>
+          <div className='links'><a href="#about">About</a></div>
+          <div className='links'><a href="#projects">Projects</a></div>
+          <div className='links'><a href="#linkedin">LinkedIn</a></div>
+          <div className='links'><a href="#github">GitHub</a></div>
+          <div className='links'><a href="#contact">Contact</a></div>
+        </div>
+      </div>
+    </div>
     </>
   );
 }

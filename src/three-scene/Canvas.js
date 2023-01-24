@@ -4,7 +4,7 @@ function Canvas() {
 
   return (
     <>
-      <Scene className='scene'/>
+      <Scene/>
     </>
   );
 }
