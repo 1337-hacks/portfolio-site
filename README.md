@@ -1,19 +1,14 @@
-Elijah's Portfolio Site
+## Elijah's Portfolio Site
 
 Welcome to my portfolio site. Check here for updates...
 
-To-do (in chronological order):
-- Add animations + transitions to pages
-- Add Projects page
-- Add Contacts page
-- Make links to socials work
-- Three scene to build and refine
-- Homepage responsiveness to refine
-- Responsiveness on all other pages
+#### To-do (in chronological order):
+- projects section animations (using react-spring)
+- page transitions (react-spring)
+- footer styling (buttons)
+- create about page
 
-Development Notes:
-- To remove react-bootstrap library (not suitable for this kind of site)
-- ~~To implement css flexbox layout instead of bootstrap layout~~ Implement css absolute-relative positioning for homepage (and maybe use flexbox for other pages...)
-- Add animations after completing a single page!
-- Have to design a 404 redirect page...
-- Development is going well and hopefully will be able to have a complete and working site very soon :)
+#### Development Notes:
+- Have to design a 404 redirect page
+- To design tablet and mobile (and maybe ultrawide) versions after PC version is fully working
+- Development is going at a steady pace and will hopefully launch very soon 🙏
