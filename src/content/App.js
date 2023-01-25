@@ -3,8 +3,9 @@ import './About'
 import Scene from '../three-scene/Scene.js'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import { config } from 'react-spring'
-import {useEffect, useState, createRef, useRef, useCallback, useLayoutEffect} from 'react'
+import {useEffect, useState} from 'react'
 import About from './About'
+import Projects from './Projects'
 
 function App() {
 
@@ -70,7 +71,7 @@ function App() {
           </div>
         </div>
 
-        <div className='landing-row'>
+        {/* <div className='landing-row'>
           <div className='landing-row-left'>
             <div className='greeting-1'>
               <h2>Good {greeting}!<br/>I'm Elijah,</h2>
@@ -81,12 +82,13 @@ function App() {
               <h2>an Aspiring<br/>Web Developer.</h2>
             </div>
           </div>
-          
-        </div>
+        </div> */}
+
+        <Projects/>
 
         <div className='footer'>
           <div className='links'><a href="#about">About</a></div>
-          <div className='links'><a href="#projects">Projects</a></div>
+          <div className='links'><a href="#projects" onClick={()=>setPageSelect("projects")}>Projects</a></div>
           <div className='links'><a href="#linkedin">LinkedIn</a></div>
           <div className='links'><a href="#github">GitHub</a></div>
           <div className='links'><a href="#contact">Contact</a></div>

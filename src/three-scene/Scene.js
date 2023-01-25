@@ -1,7 +1,6 @@
 import * as THREE from 'three'
 import { Canvas, useThree, useLoader, useFrame } from '@react-three/fiber'
 import React, { useLayoutEffect } from 'react'
-import { OrbitControls } from '@react-three/drei'
 import { LineSegments, SphereGeometry } from 'three'
 
 function Mesh(props) {
@@ -22,17 +21,17 @@ function Mesh(props) {
             let index11 = 0;
             let index12 = 0;
             for (let j = 0; j < segmentsX; j++) {
-            index11 = (segmentsX + 1) * i + j;
-            index12 = index11 + 1;
-            let index21 = index11;
-            let index22 = index11 + (segmentsX + 1);
-            indices.push(index11 + mainShift, index12 + mainShift);
-            if (index22 < ((segmentsX + 1) * (segmentsY + 1) - 1)) {
-                indices.push(index21 + mainShift, index22 + mainShift);
-            }
+                index11 = (segmentsX + 1) * i + j;
+                index12 = index11 + 1;
+                let index21 = index11;
+                let index22 = index11 + (segmentsX + 1);
+                indices.push(index11 + mainShift, index12 + mainShift);
+                if (index22 < ((segmentsX + 1) * (segmentsY + 1) - 1)) {
+                    indices.push(index21 + mainShift, index22 + mainShift);
+                }
             }
             if ((index12 + segmentsX + 1) <= ((segmentsX + 1) * (segmentsY + 1) - 1)) {
-            indices.push(index12 + mainShift, index12 + segmentsX + 1 + mainShift);
+                indices.push(index12 + mainShift, index12 + segmentsX + 1 + mainShift);
             }
         }
         
@@ -78,9 +77,7 @@ function Scene() {
             gl={{ outputEncoding: THREE.sRGBEncoding, antialias: true, toneMapping: THREE.NoToneMapping }}
             camera={{ fov: 75, near: 0.1, far: 1000, position: [15, 0, 0] }}
         >
-            {/* <OrbitControls minDistance={5} maxDistance={5}/> */}
-            <Mesh axis={new THREE.Vector3(0, 1, 0)} angle={Math.PI/5}/>
-            
+            <Mesh axis={new THREE.Vector3(0, 1, 0)} angle={Math.PI/5}/>  
         </Canvas>
     )
 }
