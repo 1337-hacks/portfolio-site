@@ -36,9 +36,23 @@
   width: 10%;
 }
 
-.logo {
+.logo-container {
   flex-grow: 2;
   text-align: center;
+  width: 100%;
+}
+
+.logo {
+  color: #251818;
+  transition: 0.25s;
+}
+
+.logo:hover {
+  color: #D9CECE;
+  background-color: #251818;
+  padding: 2px 1%;
+  border-radius: 20px;
+  transition: 0.25s;
 }
 
 .date {
@@ -47,7 +61,7 @@
   width: 10%;
 }
 
-.landing-row {
+.landing-section {
   display: flex;
   justify-content: space-around;
   align-items: stretch;

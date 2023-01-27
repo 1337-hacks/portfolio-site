@@ -26,7 +26,7 @@ function Landing() {
 
     return (
         <>
-            <div className='landing-row'>
+            <div className='landing-section'>
             <div className='landing-row-left'>
                 <div className='greeting-1'>
                 <h2>Good {greeting}!<br/>I'm Elijah,</h2>
