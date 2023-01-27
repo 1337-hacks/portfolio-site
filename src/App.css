@@ -14,6 +14,8 @@
   z-index: 2;
 }
 
+/*------------------- HOMEPAGE -------------------*/
+
 .home-container {
   display: flex;
   flex-direction: column;
@@ -80,7 +82,19 @@
 .links {
   text-align: center;
   padding: 0% 2%;
+  margin: 0% 1%;
+  border-radius: 50px;
+  transition: 0.25s;
 }
+
+.links:hover {
+  cursor: pointer;
+  background-color: #251818;
+  color: #D9CECE;
+  transition: 0.25s;
+}
+
+/*------------------- PROJECTS -------------------*/
 
 .projects-section {
   display: flex;

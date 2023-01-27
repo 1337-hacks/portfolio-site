@@ -6,6 +6,8 @@ import { config } from 'react-spring'
 import {useEffect, useState} from 'react'
 import About from './About'
 import Projects from './Projects'
+import Landing from './Landing'
+import { useSpring, animated } from 'react-spring'
 
 function App() {
 
@@ -35,7 +37,6 @@ function App() {
   }, [pageSelect])
   
   const [date, setDate] = useState(new Date())
-  const [greeting, setGreeting] = useState("xxx")
 
   useEffect(()=> {
     setInterval(()=> {
@@ -43,19 +44,9 @@ function App() {
     }, 1000)
   }, [date])
 
-  useEffect(()=> {
-    let time = date.getHours()
-
-    if(time < 12) {
-      setGreeting("morning");
-    }
-    else if(time >= 12 && time < 18) {
-      setGreeting("afternoon");
-    }
-    else {
-      setGreeting("evening");
-    }
-  }, [date]);
+  function sendMail() {
+    window.location = 'mailto:elijahnucum.exe@gmail.com'
+  }
 
   return (
     <>
@@ -71,27 +62,16 @@ function App() {
           </div>
         </div>
 
-        {/* <div className='landing-row'>
-          <div className='landing-row-left'>
-            <div className='greeting-1'>
-              <h2>Good {greeting}!<br/>I'm Elijah,</h2>
-            </div>
-          </div>
-          <div className='landing-row-right'>
-            <div className='greeting-2'>
-              <h2>an Aspiring<br/>Web Developer.</h2>
-            </div>
-          </div>
-        </div> */}
+        <Landing/>
 
-        <Projects/>
+        {/* <Projects/> */}
 
         <div className='footer'>
-          <div className='links'><a href="#about">About</a></div>
-          <div className='links'><a href="#projects" onClick={()=>setPageSelect("projects")}>Projects</a></div>
-          <div className='links'><a href="#linkedin">LinkedIn</a></div>
-          <div className='links'><a href="#github">GitHub</a></div>
-          <div className='links'><a href="#contact">Contact</a></div>
+          <animated.div className='links'>About</animated.div>
+          <div className='links' onClick={()=>setPageSelect("projects")}>Projects</div>
+          <div className='links' onClick={()=>window.open('https://www.linkedin.com/in/elijah-nucum-b30673208/')}>LinkedIn</div>
+          <div className='links' onClick={()=>window.open('https://github.com/1337-hacks')}>GitHub</div>
+          <div className='links' onClick={sendMail}>Contact</div>
         </div>
       </div>
     </div>
