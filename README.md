@@ -4,7 +4,7 @@ Welcome to my portfolio site. Check here for updates...
 
 #### To-do (in chronological order):
 - ~~projects section animations (using react-spring)~~
-- footer styling (buttons)
+- ~~footer styling (buttons)~~
 - page transitions (react-spring)
 - create about page
 

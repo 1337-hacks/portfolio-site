@@ -1,25 +1,23 @@
 import '../App.css'
+import dp from '../images/dp.png'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
-function About(props) {
+function About() {
 
     return (
-        <div className='about-page'>
-            <div>
-                <div className='about-area'>
-                    <div className='about-title'>
-                        <h2>About</h2>
-                    </div>
-                    <div className='back-button'>
-                        <a href='#home' onClick={props.back}><h2>Back</h2></a>
-                    </div>
-                </div>
-                <div className='about-description'>
-                    <h3>
-                        I am a recent graduate of Auckland University of Technology. <br/><br/>
-                        I love to use my creativity to make innovative things and create interesting experiences. <br/><br/>
-                        I also love going to the gym and listening to music, mainly rap and R&B.
-                    </h3>
-                </div>
+        <div className='about-section'>
+            <div className='about-hero'>
+                <img className='about-dp' src={dp} alt='me'/>
+                <div className='about-title'><h2> • About Me • About Me • About Me • About Me • About Me • About Me • About Me • </h2></div>
+            </div>
+            <div className='about-description'>
+                <h4>
+                    I am a recent graduate of Auckland University of Technology where I finished a Bachelors degree in Computer and Information Science.
+                    <br/><br/>
+                    After finishing university, I have continued to explore the world of web development, where I’ve found a deep interest in frontend web development and web design.
+                    <br/><br/>
+                    In my own free time I love going to the gym, listening to music and working on my own personal projects.
+                </h4>
             </div>
         </div>
     );

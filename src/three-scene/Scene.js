@@ -8,7 +8,7 @@ function Mesh(props) {
     const groupMesh = React.useRef()
 
     useFrame(()=> {
-        groupMesh.current.rotation.y += 0.001
+        groupMesh.current.rotation.y = (groupMesh.current.rotation.y + 0.001) % 360
     })
 
     function SphereToQuads(g) {

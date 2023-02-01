@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import { useSpring, animated } from 'react-spring'
 
 function Landing() {
     const [date, setDate] = useState(new Date())
@@ -27,16 +28,16 @@ function Landing() {
     return (
         <>
             <div className='landing-section'>
-            <div className='landing-row-left'>
-                <div className='greeting-1'>
-                <h2>Good {greeting}!<br/>I'm Elijah,</h2>
+                <div className='landing-row-left'>
+                    <div className='greeting-1'>
+                    <h2>Good {greeting}!<br/>I'm Elijah,</h2>
+                    </div>
                 </div>
-            </div>
-            <div className='landing-row-right'>
-                <div className='greeting-2'>
-                <h2>an Aspiring<br/>Web Developer.</h2>
+                <div className='landing-row-right'>
+                    <div className='greeting-2'>
+                    <h2>an Aspiring<br/>Web Developer.</h2>
+                    </div>
                 </div>
-            </div>
             </div>
         </>
     )

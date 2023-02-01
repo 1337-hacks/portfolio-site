@@ -12,15 +12,15 @@
   position: absolute;
   width: 100%;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
 }
 
 /*------------------- HOMEPAGE -------------------*/
-
-.home-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 
 .header {
   display: flex;
@@ -95,6 +95,7 @@
 
 .links {
   text-align: center;
+  color: #251818;
   padding: 0% 2%;
   margin: 0% 1%;
   border-radius: 50px;
@@ -142,4 +143,47 @@
 .projects-text {
   position: absolute;
   top: 45%;
+}
+
+/*------------------- ABOUT -------------------*/
+
+.about-section {
+  background-color: #E4C77D;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  flex: 5;
+  align-items: stretch;
+  padding: 0% 10%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  min-height: 100vh;
+}
+
+.about-dp {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  border-radius: 360px;
+  height: 50vh;
+  width: 50vh;
+}
+
+.about-title {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+}
+
+.about-description {
+
 }
