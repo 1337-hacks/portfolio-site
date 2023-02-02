@@ -154,34 +154,56 @@
   flex-grow: 2;
   flex: 5;
   align-items: stretch;
-  padding: 0% 10%;
   overflow-y: auto;
   overflow-x: hidden;
 }
 
 .about-hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
 }
 
 .about-dp {
-  grid-column-start: 2;
-  grid-row-start: 1;
+  position: absolute;
   border-radius: 360px;
   height: 50vh;
   width: 50vh;
+  justify-self: center;
+}
+
+.about-scroll {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  z-index: 3;
 }
 
 .about-title {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  z-index: 3;
   display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
   align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  animation: scrollText 4s infinite linear;
+  transition: all 1s ease;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-265px);
+  }
 }
 
 .about-description {

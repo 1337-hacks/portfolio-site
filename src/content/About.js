@@ -8,7 +8,12 @@ function About() {
         <div className='about-section'>
             <div className='about-hero'>
                 <img className='about-dp' src={dp} alt='me'/>
-                <div className='about-title'><h2> • About Me • About Me • About Me • About Me • About Me • About Me • About Me • </h2></div>
+                <div className='about-scroll'>
+                    <div className='about-title'>
+                        <h2> • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me</h2>
+                        {/* <h2> • About Me • </h2> */}
+                    </div>
+                </div>    
             </div>
             <div className='about-description'>
                 <h4>
