@@ -23,7 +23,12 @@ h2 {
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 2rem;
+}
+
+.desc {
+  font-family: 'Inter';
+  line-height: 2.5rem;
 }
 
 code {

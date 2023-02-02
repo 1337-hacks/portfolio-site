@@ -207,5 +207,28 @@
 }
 
 .about-description {
+  margin: 0% 10%;
+}
 
+.about-technologies {
+  margin: 5% 10% 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 10%;
+}
+
+ion-icon {
+  font-size: 4rem;
+  background-color: #c4ab6b;
+  color: black;
+  padding: 5%;
+  border-radius: 16px;
 }
