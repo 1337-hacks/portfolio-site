@@ -1,36 +1,20 @@
 import '../App.css'
 import { Suspense } from 'react'
-import { Canvas, useThree, useLoader, useFrame } from '@react-three/fiber'
+import { Canvas } from '@react-three/fiber'
 import { ScrollControls, Scroll } from '@react-three/drei'
 import placeholder from '../images/placeholder-2.jpg'
-import { useSpring, animated } from 'react-spring'
+import { motion } from 'framer-motion'
 
 function Projects() {
 
-    const [imgSpring, api] = useSpring(()=> ({
-        from: {scale: 1}
-    }))
-
-    const handleEnter = ()=> {
-        api.start({
-            from: {scale: 1},
-            to: {scale: 2}
-        })
-
-        console.log("entered")
-    }
-
-    const handleLeave = ()=> {
-        api.start({
-            from: {scale: 2},
-            to: {scale: 1}
-        })
-
-        console.log("left")
-    }
-
     return (
-        <div className='projects-section'>
+        <motion.div 
+            className='projects-section'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+        >
             <Canvas flat linear dpr={window.devicePixelRatio} gl={{ antialias: false }}>
                 <Suspense fallback={null}>
                     <ScrollControls infinite horizontal damping={4} pages={2} distance={2} maxSpeed={1} style={{scrollbarWidth: 'none'}}>
@@ -44,8 +28,7 @@ function Projects() {
                                 <h2 className='projects-text'>Projects</h2>
                             </div>
                             <div className='projects-link'>
-                                <animated.img 
-                                    style={{...imgSpring}}
+                                <img
                                     className='projects-photos' 
                                     src={placeholder} 
                                     alt='placeholder'
@@ -74,7 +57,8 @@ function Projects() {
                     </ScrollControls>
                 </Suspense>
             </Canvas>
-        </div>
+        </motion.div>
+            
     );
 }
 

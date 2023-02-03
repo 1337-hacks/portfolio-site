@@ -4,12 +4,15 @@ import './index.css';
 import App from './content/App';
 import Canvas from './three-scene/Canvas';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+  <BrowserRouter>
     <App />
     <Canvas />
+  </BrowserRouter>
   </React.StrictMode>
 );
 

@@ -2,7 +2,15 @@
 
 Welcome to my portfolio site! Check here for updates...
 
-This site is created using React and Three.js, and React Three Fiber to make the two work together.
+Site has not launched yet! However development is going at a good pace and I will hopefully launch very soon 🙏
+
+This site is created using the following:
+- React
+- Threejs
+- React Three Fiber
+- React-Spring (may remove)
+- React-Router
+- React-Transition-Group
 
 **2/02/23 -** Currently the site is not fully optimised for tablet and mobile sizes which will be worked on soon.
 
@@ -17,5 +25,3 @@ This site is created using React and Three.js, and React Three Fiber to make the
 #### Development Notes:
 - To design tablet and mobile (and maybe ultrawide) versions after PC version is fully working
 - Have to design a 404 redirect page
-
-Development is going at a steady pace and I will hopefully launch very soon 🙏

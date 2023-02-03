@@ -2,12 +2,12 @@ import '../App.css'
 import Scene from '../three-scene/Scene.js'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import { config } from 'react-spring'
-import {useEffect, useState} from 'react'
+import {useEffect, useState, createRef} from 'react'
 import About from './About'
 import Projects from './Projects'
-import Landing from './Landing'
-import { useSpring, animated } from 'react-spring'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './Home'
+import { AnimatePresence } from 'framer-motion'
+import { Routes, Route, Link, useLocation } from 'react-router-dom';
 
 function App() {
   const [date, setDate] = useState(new Date())
@@ -22,8 +22,11 @@ function App() {
     window.location = 'mailto:elijahnucum.exe@gmail.com'
   }
 
+  //--------------------------------------
+
+  const location = useLocation();
+
   return (
-    <Router>
       <div className='wrapper'>
         <div className='header'>
           <div className='time'>
@@ -34,12 +37,15 @@ function App() {
             <p>{date.toLocaleDateString()}</p>
           </div>
         </div>
-
-        <Routes>
-          <Route exact path='/' element={< Landing />}></Route>
-          <Route exact path='/about' element={< About />}></Route>
-          <Route exact path='/projects' element={< Projects />}></Route>
-        </Routes>
+        
+          <AnimatePresence mode='wait'>
+          <Routes location={location} key={location.pathname}>
+            <Route exact path='/' element={< Home />}></Route>
+            <Route exact path='/about' element={< About />}></Route>
+            <Route exact path='/projects' element={< Projects />}></Route>
+          </Routes>
+          </AnimatePresence>
+        
 
         <div className='footer'>
           <Link className='links' to='/about'>About</Link>
@@ -49,7 +55,6 @@ function App() {
           <div className='links' onClick={sendMail}>Contact</div>
         </div>
       </div>
-    </Router>
   );
 }
 

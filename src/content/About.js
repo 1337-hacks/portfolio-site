@@ -1,17 +1,23 @@
 import '../App.css'
 import dp from '../images/dp.png'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 function About() {
 
     return (
-        <div className='about-section'>
+        <motion.div 
+            className='about-section'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+        >
             <div className='about-hero'>
                 <img className='about-dp' src={dp} alt='me'/>
                 <div className='about-scroll'>
                     <div className='about-title'>
                         <h2> • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me</h2>
-                        {/* <h2> • About Me • </h2> */}
                     </div>
                 </div>    
             </div>
@@ -33,7 +39,8 @@ function About() {
                     <ion-icon src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Three.js_Icon.svg"></ion-icon>
                 </div>
             </div>
-        </div>
+        </motion.div>
+            
     );
 }
 

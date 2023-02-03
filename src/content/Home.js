@@ -1,7 +1,8 @@
 import {useState, useEffect} from 'react'
 import { useSpring, animated } from 'react-spring'
+import { motion } from 'framer-motion'
 
-function Landing() {
+function Home() {
     const [date, setDate] = useState(new Date())
     const [greeting, setGreeting] = useState("xxx")
 
@@ -27,7 +28,13 @@ function Landing() {
 
     return (
         <>
-            <div className='landing-section'>
+            <motion.div 
+                className='landing-section'
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+            >
                 <div className='landing-row-left'>
                     <div className='greeting-1'>
                     <h2>Good {greeting}!<br/>I'm Elijah,</h2>
@@ -38,9 +45,9 @@ function Landing() {
                     <h2>an Aspiring<br/>Web Developer.</h2>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </>
     )
 }
 
-export default Landing
+export default Home
