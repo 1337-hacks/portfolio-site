@@ -1,15 +1,13 @@
 import * as THREE from 'three'
-import { Canvas, useThree, useLoader, useFrame } from '@react-three/fiber'
-import React, { useLayoutEffect } from 'react'
-import { LineSegments, SphereGeometry } from 'three'
+import { Canvas, useFrame } from '@react-three/fiber'
+import React from 'react'
 
-function Mesh(props) {
-    const sphereMesh = React.useRef()
+function Mesh() {
     const groupMesh = React.useRef()
 
-    // useFrame(({clock})=> {
-    //     groupMesh.current.rotation.y = clock.getElapsedTime() / 7
-    // })
+    useFrame(()=> {
+        groupMesh.current.rotation.y += 0.001
+    })
 
     function SphereToQuads(g) {
         let p = g.parameters;
