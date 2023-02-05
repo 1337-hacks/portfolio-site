@@ -2,7 +2,7 @@
 
 Welcome to my portfolio site! Check here for updates...
 
-Site has not launched yet! However development is going at a good pace and I will hopefully launch very soon 🙏
+Site has been launched! 🙏 See the live site here: https://elijahnucum.netlify.app/
 
 #### This site is created using the following:
 - React
