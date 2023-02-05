@@ -38,4 +38,10 @@ code {
 
 a {
   text-decoration: none;
+  color: #251818;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #251818;
 }

@@ -10,7 +10,7 @@ This site is created using the following:
 - React Three Fiber
 - React-Spring (may remove)
 - React-Router
-- React-Transition-Group
+- Framer-Motion
 
 **2/02/23 -** Currently the site is not fully optimised for tablet and mobile sizes which will be worked on soon.
 

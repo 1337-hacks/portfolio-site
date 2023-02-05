@@ -7,9 +7,9 @@ function Mesh(props) {
     const sphereMesh = React.useRef()
     const groupMesh = React.useRef()
 
-    useFrame(()=> {
-        groupMesh.current.rotation.y = (groupMesh.current.rotation.y + 0.001) % 360
-    })
+    // useFrame(({clock})=> {
+    //     groupMesh.current.rotation.y = clock.getElapsedTime() / 7
+    // })
 
     function SphereToQuads(g) {
         let p = g.parameters;
@@ -77,7 +77,7 @@ function Scene() {
             gl={{ outputEncoding: THREE.sRGBEncoding, antialias: true, toneMapping: THREE.NoToneMapping }}
             camera={{ fov: 75, near: 0.1, far: 1000, position: [15, 0, 0] }}
         >
-            <Mesh axis={new THREE.Vector3(0, 1, 0)} angle={Math.PI/5}/>  
+            <Mesh axis={new THREE.Vector3(0, 1, 0)} angle={Math.PI/5}/>
         </Canvas>
     )
 }

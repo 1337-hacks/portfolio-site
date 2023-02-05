@@ -15,11 +15,11 @@ function About() {
         >
             <div className='about-hero'>
                 <img className='about-dp' src={dp} alt='me'/>
-                <div className='about-scroll'>
-                    <div className='about-title'>
+                <div className='scroll-wrapper-about'>
+                    <div className='scroll-title-about'>
                         <h2> • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me • About Me</h2>
                     </div>
-                </div>    
+                </div>
             </div>
             <div className='about-description'>
                 <h4 className='desc'>
