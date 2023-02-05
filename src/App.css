@@ -286,7 +286,7 @@ ion-icon {
   }
 
   .scroll-title-projects {
-    animation: scrollProjects 6s infinite linear;
+    animation: scrollProjectsMobile 6s infinite linear;
     transition: all 1s ease;
   }
 
