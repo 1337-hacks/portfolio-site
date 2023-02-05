@@ -4,24 +4,20 @@ Welcome to my portfolio site! Check here for updates...
 
 Site has not launched yet! However development is going at a good pace and I will hopefully launch very soon 🙏
 
-This site is created using the following:
+#### This site is created using the following:
 - React
 - Threejs
 - React Three Fiber
-- React-Spring (may remove)
 - React-Router
 - Framer-Motion
 
-**2/02/23 -** Currently the site is not fully optimised for tablet and mobile sizes which will be worked on soon.
+**IMPORTANT NOTE (5/02/23) -** As of now the site is not fully optimised for tablet and mobile sizes, ~~which will be worked on soon~~ but is currently being worked on!
 
-#### To-do (in chronological order):
-- ~~projects section animations (using react-spring)~~
-- ~~footer styling (buttons)~~
-- ~~create about page~~
-- page transitions
-- refine projects page
+### To-do (in chronological order):
+- Optimise performance of spinning globe (Threejs)
+- Design and implement tablet and mobile (and maybe ultrawide) versions after PC version is fully functional
+- Design and implement a 404 redirect page
 
-
-#### Development Notes:
-- To design tablet and mobile (and maybe ultrawide) versions after PC version is fully working
-- Have to design a 404 redirect page
+### Development Notes
+- 5/02/23: Removed react-spring as it was not fully utilised and plain CSS achieved what was required.
+- 5/02/23: The current projects page design is not final. This will be redesigned when more projects are added.

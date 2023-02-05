@@ -19,8 +19,6 @@ function App() {
     window.location = 'mailto:elijahnucum.exe@gmail.com'
   }
 
-  //--------------------------------------
-
   const location = useLocation();
 
   return (
