@@ -20,12 +20,12 @@
   bottom: 0%;
 }
 
-/*------------------- HOMEPAGE -------------------*/
+/*------------------- HEADER + FOOTER -------------------*/
 
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: baseline;
   padding: 16px 16px 0px 16px;
 }
@@ -33,24 +33,24 @@
 .time {
   text-align: left;
   font-family: 'Inter', sans-serif;
-  width: 10%;
+  width: 88px;
 }
 
 .logo-container {
-  flex-grow: 2;
   text-align: center;
-  width: 100%;
 }
 
 .logo {
   color: #251818;
   transition: 0.25s;
+  padding: 2px 8px;
+  border-radius: 20px;
 }
 
 .logo:hover {
   color: #D9CECE;
   background-color: #251818;
-  padding: 2px 1%;
+  padding: 2px 8px;
   border-radius: 20px;
   transition: 0.25s;
 }
@@ -58,33 +58,7 @@
 .date {
   text-align: right;
   font-family: 'Inter', sans-serif;
-  width: 10%;
-}
-
-.landing-section {
-  display: flex;
-  justify-content: space-around;
-  align-items: stretch;
-  flex-grow: 2;
-  padding: 10% 0%;
-}
-
-.landing-row-left {
-  display: flex;
-  align-items: flex-start;
-}
-
-.greeting-1 {
-  text-align: left;
-}
-
-.landing-row-right {
-  display: flex;
-  align-items: flex-end;
-}
-
-.greeting-2 {
-  text-align: right;
+  width: 88px;
 }
 
 .footer {
@@ -107,6 +81,37 @@
   background-color: #251818;
   color: #D9CECE;
   transition: 0.25s;
+}
+
+/*------------------- HOME -------------------*/
+
+.landing-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-grow: 2;
+  padding: 24px 24px;
+}
+
+.landing-row-left {
+  display: flex;
+  align-items: flex-start;
+}
+
+.greeting-1 {
+  text-align: left;
+  width: 100%;
+}
+
+.landing-row-right {
+  display: flex;
+  align-items: flex-end;
+}
+
+.greeting-2 {
+  text-align: right;
+  width: 100%;
 }
 
 /*------------------- PROJECTS -------------------*/
@@ -134,6 +139,7 @@
   border-style: solid;
   border-width: 2px 0px 0px 0px;
   margin-bottom: 2%;
+  gap: 16px;
 }
 
 .scroll-title-projects {
@@ -230,6 +236,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .about-icons {
@@ -248,3 +255,54 @@ ion-icon {
   border-radius: 16px;
 }
 
+
+@media only screen and (max-width: 700px) {
+  .footer {
+    flex-direction: column;
+    column-gap: 24px;
+  }
+
+  .links {
+    margin: 0px;
+    border-radius: 0px;
+    border-top: #251818;
+    border-style: solid;
+    border-width: 2px 0px 0px 0px;
+  }
+
+  .scroll-title-about {
+    animation: scrollAboutMobile 6s infinite linear;
+    transition: all 1s ease;
+  }
+
+  @keyframes scrollAboutMobile {
+    from {
+      transform: translateX(0%);
+    }
+
+    to {
+      transform: translateX(-175px);
+    }
+  }
+
+  .scroll-title-projects {
+    animation: scrollProjects 6s infinite linear;
+    transition: all 1s ease;
+  }
+
+  @keyframes scrollProjectsMobile {
+    from {
+      transform: translateX(0%);
+    }
+
+    to {
+      transform: translateX(-152px);
+    }
+  }
+
+  ion-icon {
+    font-size: 2rem;
+    padding: 5%;
+    border-radius: 16px;
+  }
+}
