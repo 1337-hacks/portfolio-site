@@ -1,5 +1,4 @@
 import {useState, useEffect} from 'react'
-import { useSpring, animated } from 'react-spring'
 import { motion } from 'framer-motion'
 
 function Home() {

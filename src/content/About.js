@@ -1,6 +1,5 @@
 import '../App.css'
 import dp from '../images/dp.png'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 function About() {
