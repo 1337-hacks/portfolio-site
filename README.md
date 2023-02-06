@@ -11,11 +11,8 @@ Site has been launched! 🙏 See the live site here: https://elijahnucum.netlify
 - React-Router
 - Framer-Motion
 
-**IMPORTANT NOTE (5/02/23) -** As of now the site is not fully optimised for tablet and mobile sizes, ~~which will be worked on soon~~ but is currently being worked on!
-
 ### To-do (in chronological order):
-- Optimise performance of spinning globe (Threejs)
-- Design and implement tablet and mobile (and maybe ultrawide) versions after PC version is fully functional
+- Design and implement ultrawide support
 - Design and implement a 404 redirect page
 
 ### Development Notes
